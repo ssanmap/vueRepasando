@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>c</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- Bootstrap CSS -->
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"  >
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"  ></script>
+</head>
+<body>
+    <div id="app">
+        <h1>componente</h1>
+        <div class="container">
+            <div class="row">
+                <alerta msg="as"></alerta>
+                <alerta msg="hola"></alerta>
+                <alerta msg="hola"></alerta>
+                <alerta msg="hola"></alerta>
+            </div>
+        </div>
+    </div>
+    
+
+    <script>
+
+        Vue.component('alerta', {
+            props:['msg', 'sebas'],
+            template:'<div class="alert alert-primary col-6" role="alert"> <button class="btn btn-primary" v-on:click="Saludar(msg)">Click</button>{{msg}}</div>',
+            methods:{
+                Saludar:function(valor){
+                    alert(`hola ${valor}`)
+                }
+            }
+        })
+       const dat = new Vue({
+           el:'#app',
+            data:{
+
+            }
+        })
+    </script>
+</body>
+</html>
